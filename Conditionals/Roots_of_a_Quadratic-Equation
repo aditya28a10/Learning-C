@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <math.h>
+int main() {
+    int a,b,c;scanf("%d%d%d",&a,&b,&c);
+    float d=b*b-(4.0*a*c);
+    if(d>0.0)
+        printf("Roots: %.02f, %.02f\nType: Real and Distinct",(-b+sqrt(d))/(2.0*a),(-b-sqrt(d))/(2.0*a));
+    else if(d<0.0)
+    {
+         printf("Roots: %.02f + %.02fi, %.02f - %.02fi\nType: Complex",(-b)/(2.0*a),sqrt(-d)/(2.0*a),(-b)/(2.0*a),sqrt(-d)/(2.0*a));
+    }
+    else
+         printf("Roots: %.02f, %.02f\nType: Real and Equal",-b/(2.0*a),-b/(2.0*a));
+        
+    return 0;
+}
